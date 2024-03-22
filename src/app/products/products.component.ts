@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Products, description } from '../products';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -8,16 +9,14 @@ import { Products, description } from '../products';
 })
 export class ProductsComponent {
 
-  products: Products[] = [
+  products: Products[] = [];
 
-    { id: 1, name: "lápis", price: 2.25, quantity: 200 },
-    { id: 2, name: "Borracha", price: 1.99, quantity: 50 },
-    { id: 3, name: "Cola Branca", price: 3.99, quantity: 80 }
+  produtcForm: FormGroup;
 
-  ];
+  constructor(private formeBuilder: FormBuilder) {
 
-  description: description[] = [
+    this.produtcForm = formeBuilder.group({
 
-    { description: "Lápis de Cor Sextavado Ecolápis 24 Cores Faber-Castell cx 1 un" }
-  ]
+    });
+  }
 }
