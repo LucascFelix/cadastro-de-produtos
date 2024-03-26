@@ -17,6 +17,15 @@ export class ProductsComponent {
 
     this.produtcForm = formeBuilder.group({
 
+      id: [''],
+      name: [''],
+      price: [''],
+      quantity: ['']
     });
   }
+
+  save(){
+    this.products.push(this.produtcForm.value);
+  }
+
 }
