@@ -1,0 +1,22 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "name": "Lápis",
+      "price": 7.99,
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "name": "Borracha",
+      "price": 3.99,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Caneta",
+      "price": 5.99,
+      "quantity": 1
+    }
+  ]
+}
