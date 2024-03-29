@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductsService {
 
-  url = "http://localhost:300/Products";
+  url = "http://localhost:3000/Products";
 
   // Após config o module httpClientModule, injetar http dentro do constructor.
 

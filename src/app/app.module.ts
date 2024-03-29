@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsComponent } from './products/products.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
